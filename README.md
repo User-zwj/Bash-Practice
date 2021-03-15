@@ -17,4 +17,5 @@ Some terms that are often misused:
 - console
 - command line
 - prompt
+
 [Video1](https://www.youtube.com/watch?v=dY35SCRXkjg) and [Video2](https://www.youtube.com/watch?v=hMSByvFHOro)
