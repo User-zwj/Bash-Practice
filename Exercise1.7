@@ -1,0 +1,50 @@
+1. Where is the **bash** program located on your system?
+cat /etc/shells
+Answer: /bin/bash
+
+2. Use the --version option to find out which version you are running.
+bash --version
+
+3. Which shell configuration files are read when you login to your system using the graphical user interface and then opening a terminal window?
+Answer: ~/.bashrc
+
+4. Are the following shells interactive shells? Are they login shells?
+- A shell opened by clicking on the background of your graphical desktop, selecting "Terminal" or such from a menu
+**Interactive shell**
+- A shell that you get after issing the command ssh localhost
+**Interactive shell & login shell**
+- A shell that you get when logging in to the console in text mode.
+**login shell**
+- A shell obtained by the command xterm &
+**Non-interactive shell**
+- A shell opened by te mysystem.sh script
+**Non-interactive shell**
+- A shell that you get on a remote host, for which you didn't have to give the login and/or password because you SSH and maybe SSH keys.
+
+5. Can you explain why **Bash** does not exit when you type **Ctrl+C** on the command ine?
+Answer: Ctrl+C is the interrupt signal. When you type this in a terminal, bash sends SIGINT to the job in the foreground. If there is no job (which is the case when you've just opened a terminal), nothing happens. The terminal emulator program is not a job running in the shell, so, it doesn't get the signal and doesn't close.
+
+If you want to close the terminal with a control key, use Ctrl+D (EOF) which causes bash to exit (and closes the terminal too).
+[Link](https://askubuntu.com/questions/890591/why-doesnt-ctrl-c-kill-the-terminal-itself)
+
+6. Display directory stack content.
+Answer: The directory stack is a list of recently-visited directories. The pushd builtin adds directories to the stack as it changes the current directory, and the popd builtin removes specified directories from the stack and changes the current directory to the directory removed. The dirs builtin displays the contents of the directory stack. The current directory is always the "top" of the directory stack.
+
+The contents of the directory stack are also visible as the value of the DIRSTACK shell variable
+[Link](https://www.gnu.org/software/bash/manual/html_node/The-Directory-Stack.html)
+
+7. If it is not yet the case, set your prompt so that it displays your location in the file system hierarchy, for instance add this line to ~/.bashrc:
+	export PS1="\u@\h \w>"
+[Tutorial Video link](https://www.youtube.com/watch?v=vDOVEDl2z84)
+[Template link](https://github.com/mathiasbynens/dotfiles)
+
+8. Display hashed commands for your current shell session.
+hash
+
+9. How many processes are currently running on your system? Use **ps** and **wc**, the first line of output of **ps** is not a process!
+ps
+ps -e | wc -l
+[Useful Link](https://www.cyberciti.biz/faq/how-do-i-count-how-many-processes-are-running-in-linux/)
+
+10. How to display the system hostname? Only the name, nothing more!
+echo $HOSTNAME
