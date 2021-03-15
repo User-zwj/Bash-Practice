@@ -1,0 +1,32 @@
+
+[1] - or d 
+  If it is a file, then -; if it is directory, then d
+
+Group[2-4]or[5-7]or[8-10]
+r: read
+w: write
+x: execute
+
+Group1: permission for the owner
+Group2: permission for the group
+Group3: permission for anyone else
+
+u - user
+g - group
+o - others
+
+chmod o+w filename   #Give others write permission
+chmod o-w filename   #Take the permission away
+
+---------------------
+chmod 754 filenmae
+4 - read
+2 - write
+1 - execute
+0 - no permission
+
+[Link](https://www.youtube.com/watch?v=BmVmJi5dR9c)
+
+
+
+
