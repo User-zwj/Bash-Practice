@@ -10,3 +10,12 @@ Shell types:
 - **csh** or C shell: the syntax of this shell resembles that of C programming language.
 - **tcsh** or TENEX C shell: a superset of the common C shell. (Also called Turbo C shell)
 - **ksh** or the Korn shell: a superset of the Bourne shell.
+
+Some terms that are often misused:
+- terminal
+- bash
+- console
+- command line
+- prompt(PS1)
+
+[Video1](https://www.youtube.com/watch?v=dY35SCRXkjg) and [Video2](https://www.youtube.com/watch?v=hMSByvFHOro)
