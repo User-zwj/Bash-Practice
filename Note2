@@ -1,0 +1,30 @@
+Bash built-in:
+echo, export
+
+------------------
+Check https://askubuntu.com/questions/720678/what-does-export-path-somethingpath-mean for "export"
+Check chmod in misc directory for chmod review.
+
+
+## Execute the script
+Method 1:
+export PATH="$PATH:the_path_to_the_file"
+chmod u+x filename.sh      #give execute permission
+filename.sh
+
+Method 2:
+chmod u+x filename.sh
+./filename.sh             #no need to put the file direc in the PATH
+
+Method 3:
+source filename.sh        #No need to change permission
+
+Note: Method1 and 2 are executing the script in a subshell. While method3 is not. You can type $VALUE or $COLOUR after each to see if there returns anything.
+
+
+## Script basics
+Do Not leave the script with an empty first line.
+First line starts with #!/bin/bash
+Use hash mark # to make comments
+
+
