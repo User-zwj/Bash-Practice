@@ -16,6 +16,6 @@ Some terms that are often misused:
 - bash
 - console
 - command line
-- prompt
+- prompt(PS1)
 
 [Video1](https://www.youtube.com/watch?v=dY35SCRXkjg) and [Video2](https://www.youtube.com/watch?v=hMSByvFHOro)
