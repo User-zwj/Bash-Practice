@@ -1,0 +1,33 @@
+## 1.1
+#Give an overview of known shells on a linux system
+cat /etc/shells
+
+#Default shell is set in /etc/passwd file
+
+## 1.2
+The GNU Project is a free software, mass collaboration project that Richard Stallman announced on September 27, 1983. Its goal is to give computer users freedom and control in their use of their computers and computing devices by collaboratively developing and publishing software that gives everyone the rights to freely run the software, copy and distribute it, study it, and modify it. GNU software grants these rights in its license.
+
+Bash is the GNU Project's shell—the Bourne Again SHell (Unix shell)
+
+A login shell is a shell given to a user upon login into their user account.
+#The following command tells if you are in a login shell
+shopt login_shell
+
+**Bash startup files**
+- Invoked as an interactive login shell
+  /etc/profile
+  ~/.bash_profile, ~/.bash_login or ~/.profile
+  ~/.bash_logout
+- Invoked as an interactive non-login shell
+  ~/.bashrc
+- Invoked non-interactively
+  All scripts use non-interactive shells.
+
+Interactive shell or non-interactive?
+echo $-
+All scripts use non-interactive shells.
+
+
+
+
+
