@@ -1,5 +1,5 @@
 Bash built-in:
-echo, export
+echo, export, set
 
 ------------------
 Check https://askubuntu.com/questions/720678/what-does-export-path-somethingpath-mean for "export"
@@ -24,7 +24,26 @@ Note: Method1 and 2 are executing the script in a subshell. While method3 is not
 
 ## Script basics
 Do Not leave the script with an empty first line.
-First line starts with #!/bin/bash
+First line starts with #!/bin/bash        #! followed by the path to the shell
 Use hash mark # to make comments
+
+## Debugging bash scripts
+bash -x filename.sh      #debug the whole file
+-------
+# If only a portion in commented-script1.sh:
+set -x
+w
+set+x
+# Then run
+filename.sh             #only part is debugged
+------
+# Debugging options
+set -f      # Disable file name generation using metacharacters
+set -v      # Prints shell input lines as they are read
+set -x      # Print command traces before executing command
+# These modes can be specified in the script itself, for example
+#!/bin/bash -xv      #1:input; 2:command trace with +; 3:output
+
+
 
 

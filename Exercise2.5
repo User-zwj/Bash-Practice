@@ -1,0 +1,13 @@
+1. Write a script using your favorite editor. The script should display the path to your homedirectory and the terminal type that you are using. Additionally it shows all the services started up in runlevel3 on your system.
+$HOME
+$TERM
+ls /etc/rc3.d/S*
+(The last one is not working)
+
+4. Change permissions on your script so that you can run it.
+Method 1:
+chmod u+x filename.sh
+Method 2:
+chmod 744 filename.sh
+(Check misc/chmod for details)
+
