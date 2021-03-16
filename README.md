@@ -14,10 +14,10 @@ Shell types:
 ## Contents
 - Chapter 1
 
-  mysystem.sh
+  scripts/mysystem.sh
 - Chapter 2
 
-  script1.sh
+  scripts/script1.sh, commented-script1.sh, script2-5.sh
 
 
 
