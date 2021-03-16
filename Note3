@@ -1,0 +1,79 @@
+# System-wide configuration files
+/etc/profile   #apply to all your users' environments
+	       #is also read by other shells
+/etc/bashrc    #better put Bash-specific configurations in this file
+
+# Individual user configuration files
+~/.bash_profile     #configure user environments individually
+~/.bash_login       #specific settings that are normally only executed 
+		    #when you login to the system
+                    #In the absence of ~/.bash_profile, this file will be read
+~/.profile          #In the absence of ~/.bash_profile, ~/.bash_login, this file will be read
+	 	    #It is accessible by other shells
+~/.bashrc  	    #aliases are defined
+		    #can also load /etc/bashrc
+~/.bash_logout 	    #specific instructions for the logout procedure
+		    #Useful for remote connections, leave a clean window after closing them
+
+## When making changes to above files, users have to either reconnect to the system or 'source'
+## the file for the changes to take effect.
+
+## Variables
+shell variables are in uppercase characters by convention.
+- Global variables     #available in all shells
+     'env' or 'printenv': display environment variables
+- Local variables      #only available in the current shell
+     'set': display a list of all variables (including environment variables) and functions.
+
+## Creating variables
+Variables are case sensitive and capitalized by default.
+Giving local variables a lowercase name is a convention. eg.
+var="2"     #no spaces around the equal sign!!!
+echo $var
+var2="first"
+echo $var2
+unset var var2
+
+## Exporting variables
+Variables created above are only available to current shell.
+In order to pass variables to a subshell, we need to *export* the using the export built-in command.
+Variables that are exported are referred to as environment variables. eg.
+export VARNAME="value"
+!!!A subshell can change variables it inherited from the parent, but the changes made by the child don't affect the parent. eg.
+name="zwj"
+bash
+echo $name
+exit
+export name
+bash
+echo $name
+export name="zj"
+echo $name
+exit
+echo $name
+
+## Reserved variables
+check page39 for Bourne shell reserved variables and bash reserved variables
+
+## Special parameters
+The shell treats several paraters specially. These parameters may only be referenced; assignment to them is not allowed.
+see scripts/positional.sh, then run
+positional.sh one two three four five
+positional.sh one two
+check page43 for more eg
+
+## Script recycling with variables
+check page43-44 for egs
+
+
+
+
+
+
+
+
+
+
+
+
+
