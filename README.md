@@ -18,7 +18,9 @@ Shell types:
 - Chapter 2
 
   scripts/script1.sh, commented-script1.sh, script2-5.sh
+- Chapter 3
 
+  scripts/positional.sh
 
 
 ### Some terms that are often misused:
