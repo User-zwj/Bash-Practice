@@ -1,5 +1,5 @@
 Bash built-in:
-echo, export, set
+echo, export, source, printf, set, alias, unalias
 
 ------------------
 Check https://askubuntu.com/questions/720678/what-does-export-path-somethingpath-mean for "export"
@@ -43,55 +43,6 @@ set -v      # Prints shell input lines as they are read
 set -x      # Print command traces before executing command
 # These modes can be specified in the script itself, for example
 #!/bin/bash -xv      #1:input; 2:command trace with +; 3:output
-
-
-##Quoting characters
-# Escape character 
-    backslash \
-    single quotes ' '
-    double quotes " "
-eg:
-date=20000101
-echo $date
-echo \$date
-echo '$date'
-echo "$date"
-echo "`date`"
-echo "I'd say: \"Go for it!\""
-echo "\"
-echo "\\"
-
-
-## Shell expansion
-1. Brace expansion
-echo sp{el,il,al}l
-2. Tilde expansion
-***
-3. Variable expansion
-echo $SHELL
-echo ${!N*}
-echo $FRANKY
-echo ${FRANKY:=Franky}
-4. Command substitution
-when a command is enclose like 
-$(command)
-or
-`command`
-eg.
-echo `date`
-echo $(date)
-5. Arithmetic expansion
-$((Expression))
-6. Process subsitution
-7. Word splitting
-
-
-
-
-
-
-
-
 
 
 

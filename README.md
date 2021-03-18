@@ -31,3 +31,8 @@ Shell types:
 - prompt(PS1)
 
 [Video1](https://www.youtube.com/watch?v=dY35SCRXkjg) and [Video2](https://www.youtube.com/watch?v=hMSByvFHOro)
+
+
+[Bash Built-ins](https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html)
+[df command](https://www.tecmint.com/how-to-check-disk-space-in-linux/)
+
