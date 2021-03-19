@@ -28,21 +28,12 @@ sudo chmod 444 profile
 
 7. For the root account, set the prompt to something like "Danger!! root is doing stuff in \w", preferably in a bright color such as red or pink or in reverse video mode.
 
-In ~/.bash_profile,
-if [ -f ~/.bashrc ]; then
-    source ~/.bashrc
-fi
-In ~/.bashrc
-# Highlight the user name when logged in as root.
-if [[ "${USER}" == "root" ]]; then
-	userStyle="${red}";
-	PS1=“Danger!! root is doing stuff in \w”;
-	export PS1;
-else
-	userStyle="${orange}";
-fi;
-
-(Not working!!!)
+sudo su -
+vim .bash_profile
+add the following content:
+PS1="\[\e[01;31m Danger!! root is doing stuff in \w: \] \[\e[00m\]"
+source .bash_profile
+exit
 
 **To go to the sudo mode, use
 sudo su

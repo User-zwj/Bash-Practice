@@ -1,12 +1,13 @@
 #!/bin/bash
 
-a=1
-b=3
+posvar1="$1"
+posvar2="$2"
 
-echo "The sum of $a and $b is:"
+echo "One integer is $1"
+echo "Another integer is $2"
 echo
-echo "$((a+b))"
-echo 
-echo "The command of \$((a++)) is:"
-echo
-echo "$((a++))"
+
+echo "A rectangle with length and width to be $posvar1 and $posvar2"
+echo "The area is:"
+((area=posvar1*posvar2))
+echo "$area"

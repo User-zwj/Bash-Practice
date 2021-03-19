@@ -103,6 +103,20 @@ echo `date`
 echo $(date)
 5. Arithmetic expansion
 $((Expression))
+Example:
+a=1
+b=3
+echo $((a+b))
+or
+((c=a+b))
+echo $c
+
+a=3
+echo $((++a/2))
+
+y=$((++a/2)) means a=a+1,y=a/2
+y=$((a++/2)) means y=a/2,a=a+1
+
 6. Process subsitution
 7. Word splitting
 
