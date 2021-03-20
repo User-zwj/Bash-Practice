@@ -20,7 +20,7 @@ Shell types:
   scripts/script1.sh, commented-script1.sh, script2-5.sh
 - Chapter 3
 
-  scripts/positional.sh
+  scripts/positional.sh, Exercise3-8-Q9.sh
 
 
 ### Some terms that are often misused:
