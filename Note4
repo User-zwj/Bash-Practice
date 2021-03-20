@@ -1,0 +1,44 @@
+## Regular expression
+
+
+## grep
+grep root /etc/passwd
+grep -n root /etc/passwd       #-n: show line number
+grep -v root /etc/passwd       #-v: print lines except lines with 'root'
+grep -c root /etc/psswd        #-c: total count of match lines
+grep -i root /etc/passwd       #-i: ignore case
+
+[grep or/and/not](https://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/)
+A pipeline is a sequence of one or more commands separated by one of the control operators ‘|’ or ‘|&’. The output of each command in the pipeline is connected via a pipe to the input of the next command. That is, each command reads the previous command’s output. 
+
+grep -V
+grep --version
+
+grep ^root /etc/passwd        #lines starting with 'root'
+grep :$ /etc/passwd           #lines ending in ':'
+grep export ~/.bash_profile | grep '\<PATH'
+			      #lines starting with 'export PATH'
+grep -w root /etc/passwd      #find a string that is a separate word
+
+## character classes
+bracket expression: [01234], [abcd]
+range expression: [0-4]=[01234]
+## Wildcards
+grep '\<c...h\>' /etc/passwd    # . for a single character match
+grep '\<c.*h\>' /etc/passwd     # .* for matching multiple characters
+grep '*' /etc/passwd            # find * 
+
+# the asterisk (*) matches any string
+# the question mark (?) matches any single character
+(Also check Note3)
+touch "*"
+ls "*"
+
+ls -ld [a-cx-z]*
+
+## Character classes
+[:CLASS:]
+ls -ld [[:digit:]]*
+ls -ld [[:upper:]]*
+
+

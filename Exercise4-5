@@ -1,0 +1,39 @@
+1. Display a list of all the users on your system who log in with the Bash shell as a default.
+
+grep '/bin/bash' /etc/passwd | awk -F: '{ print $1}'
+or 
+grep '/bin/bash' /etc/passwd | cut -d: -f1
+
+2. From the /etc/group directory, display all lines starting with the string "daemon".
+
+grep ^daemon /etc/group
+
+3. Print all the lines from the same file that don't contain the string.
+
+grep -v ^daemon /etc/grup
+
+4. Display localhost information from the /etc/hosts file, display the line number(s) matching the search string and count the number of occurrences of the string.
+
+grep localhost /etc/hosts
+grep -n localhost /etc/hosts
+grep -c localhost /etc/hosts
+
+5. Display a list of /usr/share/doc subdirectories containing information about shells.
+
+grep shell /usr/share/doc/*/*
+
+6. How many README files do these subdirectories contain? Don't count anything in the form of "README.a_string".
+
+grep shell /usr/share/doc/*/* | grep -c README
+(Something missing)
+
+7. Make a list of files in your home directory that were changed less than 10 hours ago, using grep, but leave out directories.
+
+
+
+
+
+
+
+
+
