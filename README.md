@@ -21,6 +21,13 @@ Shell types:
 - Chapter 3
 
   scripts/positional.sh, Exercise3-8-Q9.sh
+- Chapter 4
+
+  scripts/
+- Chapter 5
+
+  scripts/example5-2, script.sed, test, txt2html.sh, ex55-1, ex55-1-del, ex55-2, ex55-2-del
+  
 
 
 ### Some terms that are often misused:
