@@ -26,7 +26,7 @@ Shell types:
   scripts/
 - Chapter 5
 
-  scripts/example5-2, script.sed, test, txt2html.sh
+  scripts/example5-2, script.sed, test, txt2html.sh, ex55-1, ex55-1-del, ex55-2, ex55-2-del
   
 
 
