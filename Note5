@@ -1,0 +1,45 @@
+## Sed
+A Stream EDitor is used to perform basic transformations on text read from a file or a pipe.
+** Filter text that it gets from a pipeline feed
+
+Command
+a\   Append text below current line
+c\   Change text in the current line with new text
+d    Delete text
+i\   Insert text above current line
+p    Print text
+r    Read a file
+s    Search and replace text
+w    Write to a file
+
+Options
+-e SCRIPT     
+-f
+-n
+-V
+
+sed '/erors/p' example5-2        #Pint all lines, lines including erors twice
+sed -n '/erors/p' example5-2     #only print lines including erors
+sed '/erors/d' example5-2        #only print lines excluding erors
+sed -n '/^This.*errors.$/p' example5-2      #only print lines in the corresponding format
+
+sed '2,4d' example5-2            #print lines excluding lines2-4
+sed '3,$d' example5-2            #print lines excluding lines3-end
+sed -n '3,$d' example5-2         #print lines3-end
+sed -n '/a text/,/This/p' example5-2        #print lines starting from 'a text', ending with 'This'
+
+sed 's/erors/errors/' example5-2   #substitue
+sed 's/erors/errors/g' example5-2 
+sed 's/^/> /' example5-2        # /> 
+sed 's/^/start/' example5-2     # /start
+sed 's/$/End/' example5-2     # /End
+sed -e 's/erors/errors/g' -e 's/last/final/g' example5-2    #multiple subs
+
+To save the output:
+sed option 'some/experssion' filename > sed_output_file
+
+## Reading sed commands from a file
+Multiple sed commands can be put in a file and executed using -f option
+
+
+
