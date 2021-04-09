@@ -24,7 +24,8 @@ grep -w root /etc/passwd      #find a string that is a separate word
 bracket expression: [01234], [abcd]
 range expression: [0-4]=[01234]
 ## Wildcards
-grep '\<c...h\>' /etc/passwd    # . for a single character match
+grep '\<c...h\>' /etc/passwd    # get a list of all five-character English dictionary wordsstarting with "c" and ending in "h"
+                                # . for a single character match
 grep '\<c.*h\>' /etc/passwd     # .* for matching multiple characters
 grep '*' /etc/passwd            # find * 
 

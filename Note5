@@ -1,5 +1,5 @@
 ## Sed
-A Stream EDitor is used to perform basic transformations on text read from a file or a pipe.
+A Stream Editor is used to perform basic transformations on text read from a file or a pipe.
 ** Filter text that it gets from a pipeline feed
 
 Command
@@ -18,6 +18,7 @@ Options
 -n
 -V
 
+### (Connect with grep to avoid mixing up)
 sed '/erors/p' example5-2        #Pint all lines, lines including erors twice
 sed -n '/erors/p' example5-2     #only print lines including erors
 sed '/erors/d' example5-2        #only print lines excluding erors
@@ -25,15 +26,15 @@ sed -n '/^This.*errors.$/p' example5-2      #only print lines in the correspondi
 
 sed '2,4d' example5-2            #print lines excluding lines2-4
 sed '3,$d' example5-2            #print lines excluding lines3-end
-sed -n '3,$d' example5-2         #print lines3-end
-sed -n '/a text/,/This/p' example5-2        #print lines starting from 'a text', ending with 'This'
+sed -n '3,$p' example5-2         #print lines3-end
+sed -n '/a text/,/This/p' example5-2        #prints the first line containing the pattern "a text", up to and including the next line containing the pattern "a line":
 
-sed 's/erors/errors/' example5-2   #substitue
+sed 's/erors/errors/' example5-2   #substitute, but once each line
 sed 's/erors/errors/g' example5-2 
-sed 's/^/> /' example5-2        # /> 
+sed 's/^/> /' example5-2        # Inset > at the beginning of each line 
 sed 's/^/start/' example5-2     # /start
 sed 's/$/End/' example5-2     # /End
-sed -e 's/erors/errors/g' -e 's/last/final/g' example5-2    #multiple subs
+sed -e 's/erors/errors/g' -e 's/last/final/g' example5-2    #multiple subs, two -e
 
 To save the output:
 sed option 'some/experssion' filename > sed_output_file

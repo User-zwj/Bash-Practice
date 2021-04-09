@@ -78,7 +78,7 @@ echo \$date
 echo '$date'
 echo "$date"
 echo "`date`"
-echo "I'd say: \"Go for it!\""
+echo "I'd say: \"Go for it!\""     #problem!!!
 echo "\"
 echo "\\"
 
