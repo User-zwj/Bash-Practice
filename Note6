@@ -1,0 +1,35 @@
+#gawk
+Gawk is the GNU version of commonly available UNIX awk program, another popular stream editor.
+
+##Ways to run awk
+
+awk PROGRAM inputfle(s)
+
+awk -f PROGRAM-FILE inputifle(s)
+
+ls -l | awk '{print $5 $9}'  #print 5th and ninth column
+
+ls -ldh * | grep -v total | \
+awk '{ print "Size is " $5 " bytes for " $9}'
+
+df -h | sort -rnk 5 | head -3 | \
+awk '{print "Partition " $9 "\t: " $5 " full!" }'
+
+#-h: supplying humanly readable size formats for bigger files.
+
+### print command and regular expressions
+
+awk 'EXPRESSION {PROGRAM}' file(s)
+
+df -h | awk '/dev\/disk/ {print $9 "\t: " $5}'
+
+ls -l | awk '/\<(r|x).*\.md$/ {print $9}'
+
+ls -l | \
+awk 'BEGIN {print "Files found:\n" } /\<[a|x].*\.conf$/ {print $9 }'
+
+ls -l | \
+awk '/\<[a|x].*\.conf$/ {print $9 } END { print \
+"Can I do anything else for you, mistress?" }'
+
+
